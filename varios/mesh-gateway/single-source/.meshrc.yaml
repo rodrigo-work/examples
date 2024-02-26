@@ -1,0 +1,39 @@
+sources:
+  - name: PetStore
+    handler:
+      openapi:
+        endpoint: https://petstore.swagger.io/v2/
+        source: https://petstore.swagger.io/v2/swagger.json
+
+  # - name: MyDbPostgres
+  #   handler:
+  #     postgraphile:
+  #       connectionString: postgres://postgres:postgres@localhost:5432/csp
+
+  # You can also use environment variables like below
+  # connectionString: postgres://{env.POSTGRES_USER}:{env.POSTGRES_PASSWORD}@localhost/postgres
+#   - name: Books
+#     handler:
+#       openapi:
+#         source: http://localhost:3002/openapi.json
+# transforms:
+#   - rename:
+#       renames:
+#         - from:
+#             type: Query
+#             field: AppController_(.*)
+#           to:
+#             type: Query
+#             field: $1
+#           useRegExpForFields: true
+#   - filterSchema:
+#       filters:
+#         - Query.!book
+#   - rename:
+#       renames:
+#         - from:
+#             type: Query
+#             field: categories
+#           to:
+#             type: Query
+#             field: booksCategories
