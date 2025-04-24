@@ -1,13 +1,9 @@
 {
-  "name": "examples",
-  "version": "1.0.0",
+  "name": "my-turborepo",
+  "description": "A barebones Turborepo example for working with Task Graphs.",
   "private": true,
-  "license": "MIT",
-  "author": {
-    "name": "Rodrigo Ribeiro",
-    "email": "me@rodrigo.work"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "packageManager": "pnpm@8.15.6",
+  "devDependencies": {
+    "turbo": "^2.5.1"
   }
 }
