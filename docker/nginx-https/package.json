@@ -1,0 +1,10 @@
+{
+  "name": "nginx-https",
+  "scripts": {
+    "build": "docker build -t nginx-https .",
+    "start": "docker run -d -p 443:443 nginx-https"
+  },
+  "dependencies": {
+    "tooling-config": "workspace:*"
+  }
+}
